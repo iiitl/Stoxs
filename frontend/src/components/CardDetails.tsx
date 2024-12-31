@@ -66,7 +66,7 @@ function CardDetails() {
                     <CardTitle>Total Value</CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <p>{totalValue}</p>
+                    <p>{totalValue?.toFixed(2)}</p>
                 </CardContent>
             </Card>
             <Card className="w-[350px]">
