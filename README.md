@@ -4,7 +4,7 @@ Portfolio Tracker app using Spring Boot and React.
 
 ## Description
 
-Stoxs is a web application designed to help users track their investment portfolios. It is built with a Spring Boot backend and a React frontend, providing a seamless and efficient user experience.
+Stoxs is a web application designed to help users track their investment portfolios. It is built with a Spring Boot backend and a React frontend, providing a seamless and efficient user experience. This project uses a monorepo structure.
 
 ## Features
 
@@ -31,32 +31,36 @@ Stoxs is a web application designed to help users track their investment portfol
 ### Installation
 
 1. Clone the repository:
-   ```sh
-   git clone https://github.com/0PrashantYadav0/Stoxs.git
-   ```
+    ```sh
+    git clone https://github.com/0PrashantYadav0/Stoxs.git
+    ```
 2. Navigate to the project directory:
-   ```sh
-   cd Stoxs
-   ```
+    ```sh
+    cd Stoxs
+    ```
 3. Install the frontend dependencies:
-   ```sh
-   cd frontend
-   npm install
-   ```
+    ```sh
+    cd frontend
+    npm install
+    ```
 4. Run the frontend:
-   ```sh
-   npm run dev
-   ```
+    ```sh
+    npm run dev
+    ```
 5. Run the backend:
-   ```sh
-   cd ../backend
-   ./mvnw spring-boot:run
-   ```
+    ```sh
+    cd ../backend
+    ./mvnw spring-boot:run
+    ```
 
 ## Usage
 
 1. Open a web browser and go to `http://localhost:5173` for Frontend and `http://localhost:8080` for Backend.
 2. Start tracking your investment portfolios.
+
+## Deployment
+
+The application is deployed at [stoxs.vercel.app](https://stoxs.vercel.app). The backend is deployed using Railway and the frontend is deployed using Vercel.
 
 ## Contributing
 
