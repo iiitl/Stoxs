@@ -10,7 +10,7 @@ function Home() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch(`http://localhost:8080/api/portfolio/distribution`)
+      const res = await fetch(`https://hospitable-warmth-backend.up.railway.app//api/portfolio/distribution`)
       const data = await res.json()
       setSampleData(data)
     }

@@ -13,7 +13,7 @@ function CardDetails() {
 
     const handleGetTotalValue = async () => {
         try {
-            const res = await fetch(`http://localhost:8080/api/portfolio/total-value`)
+            const res = await fetch(`https://hospitable-warmth-backend.up.railway.app/api/portfolio/total-value`)
             const data = await res.json()
             setTotalValue(data)
         } catch (error) {
@@ -23,7 +23,7 @@ function CardDetails() {
 
     const handleGetTopPerforming = async () => {
         try {
-            const res = await fetch(`http://localhost:8080/api/portfolio/top-performing`)
+            const res = await fetch(`https://hospitable-warmth-backend.up.railway.app/api/portfolio/top-performing`)
             const data = await res.json()
             setTopPerforming(data)
         } catch (error) {
@@ -33,7 +33,7 @@ function CardDetails() {
 
     const handleGetMarketStatus = async () => {
         try {
-            const res = await fetch(`http://localhost:8080/api/stocks/US/market-status`)
+            const res = await fetch(`https://hospitable-warmth-backend.up.railway.app/api/stocks/US/market-status`)
             const data = await res.json()
             setMarketStatus(data?.isOpen)
         } catch (error) {

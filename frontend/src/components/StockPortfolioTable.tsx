@@ -91,7 +91,7 @@ function StockPortfolioTable() {
   }
 
   const handlePutRequest = async (stock : Stock) => {
-    fetch(`http://localhost:8080/api/stocks/${stock.id}`, {
+    fetch(`https://hospitable-warmth-backend.up.railway.app/api/stocks/${stock.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -106,7 +106,7 @@ function StockPortfolioTable() {
       setLoading(false)
     }
     , 2000)
-    const response = await fetch(`http://localhost:8080/api/stocks`)
+    const response = await fetch(`https://hospitable-warmth-backend.up.railway.app/api/stocks`)
     const data = await response.json()
     updateStockValues(data);
     
@@ -114,14 +114,14 @@ function StockPortfolioTable() {
 
   const deleteStock = async (id: string) => {
     setStocks(stocks.filter(stock => stock.id !== id))    
-    await fetch(`http://localhost:8080/api/stocks/${id}`, {
+    await fetch(`https://hospitable-warmth-backend.up.railway.app/api/stocks/${id}`, {
       method: 'DELETE'
     })
   }
 
   const getStockPrice = async (ticker: string) => {
     setLoading(true)
-    const response = await fetch(`http://localhost:8080/api/stocks/${ticker}/price`)
+    const response = await fetch(`https://hospitable-warmth-backend.up.railway.app/api/stocks/${ticker}/price`)
     const data = await response.json()
     setLoading(false)
     return data.c
@@ -174,7 +174,7 @@ function StockPortfolioTable() {
       buyPrice: buyPrice === 0 ? stock?.buyPrice : buyPrice
     }
 
-    const rtn = await fetch(`http://localhost:8080/api/stocks/${id}`, {
+    const rtn = await fetch(`https://hospitable-warmth-backend.up.railway.app/api/stocks/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'

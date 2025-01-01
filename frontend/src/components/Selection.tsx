@@ -46,7 +46,7 @@ function Selection() {
     const handleSearch = async () => {
         setIsLoading(true);
         try {
-            const res = await fetch(`http://localhost:8080/api/stocks/suggestions/${stock}`)
+            const res = await fetch(`https://hospitable-warmth-backend.up.railway.app/api/stocks/suggestions/${stock}`)
             const data = await res.json()
             const value = data.result;
             // filter out the suggestion that does not contain . or - in symbol
@@ -107,7 +107,7 @@ function Selection() {
             buyPrice: formData.buyPrice
         }
 
-        const res = await fetch(`http://localhost:8080/api/stocks`, {
+        const res = await fetch(`https://hospitable-warmth-backend.up.railway.app/api/stocks`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
