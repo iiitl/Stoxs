@@ -18,7 +18,7 @@ function Home() {
   }, [])
 
   return (
-    <div className="flex items-center justify-around py-12">
+    <div className="flex items-center justify-around py-12 max-md:flex-col">
       <div className="w-[48%] flex justify-center items-center flex-col">
         <div>
           <h1 className="text-4xl font-bold text-center py-4">Why you need stoxs ? </h1>
