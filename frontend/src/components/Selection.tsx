@@ -150,7 +150,7 @@ function Selection() {
                 </CardContent>
                 </Card>
             </div>
-                {suggestions.length && displaySuggestions()}
+            {suggestions.length > 0 ? displaySuggestions() : null}
         </div>
         :
         selectedValue && <div className="flex justify-center items-center">
